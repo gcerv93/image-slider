@@ -60,4 +60,6 @@ const imageSlider = (() => {
         "block";
     });
   });
+
+  setInterval(next, 5000);
 })();
