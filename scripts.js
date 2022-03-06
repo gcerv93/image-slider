@@ -52,4 +52,12 @@ const imageSlider = (() => {
   previousBtn.addEventListener("click", () => {
     previous();
   });
+
+  navBtns.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      hideImages(index);
+      document.querySelector(`.image[data-index="${index}"]`).style.display =
+        "block";
+    });
+  });
 })();

@@ -45,4 +45,5 @@ body {
 .nav-btns {
   position: relative;
   top: 50px;
+  cursor: pointer;
 }
