@@ -16,9 +16,11 @@ body {
 
 .container {
   background-color: lightgrey;
+  border-radius: 10px;
   height: 500px;
   width: 700px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -26,7 +28,6 @@ body {
 .img-slider {
   display: flex;
   position: relative;
-  /* left: 900px; */
 }
 
 #leftArrow {
@@ -39,4 +40,9 @@ body {
 
 #leftArrow:hover, #rightArrow:hover {
   cursor: pointer;
+}
+
+.nav-btns {
+  position: relative;
+  top: 50px;
 }

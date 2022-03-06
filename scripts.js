@@ -1,5 +1,6 @@
 const imageSlider = (() => {
   const images = document.querySelectorAll(".image");
+  const navBtns = document.querySelectorAll(".nav-btn");
   let num = 0;
 
   const hideImages = (idx) => {
@@ -9,13 +10,22 @@ const imageSlider = (() => {
         image.style.display = "none";
       }
     });
+
+    navBtns.forEach((button, index) => {
+      button.dataset.index = index;
+      if (index !== idx) {
+        button.src = "./images/circle-outline.svg";
+      } else {
+        button.src = "./images/circle-filled.svg";
+      }
+    });
   };
 
   hideImages(num);
 
   const next = () => {
     if (num == 4) {
-      return;
+      num = -1;
     }
     num += 1;
     hideImages(num);
@@ -25,7 +35,7 @@ const imageSlider = (() => {
 
   const previous = () => {
     if (num == 0) {
-      return;
+      num = 5;
     }
     num -= 1;
     hideImages(num);
